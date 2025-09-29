@@ -10,26 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Install TeX Live
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-          latexmk \
-          texlive-xetex \
-          texlive-latex-extra \
-          texlive-fonts-recommended \
-          texlive-fonts-extra \
-          texlive-lang-portuguese
+      - name: Compile LaTeX (XeLaTeX)
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: apostila_github.tex
+          latexmk_use_xelatex: true
 
-    - name: Compile LaTeX
-      run: |
-        latexmk -pdf -xelatex apostila_github.tex
-        latexmk -c
-
-    - name: Upload PDF
-      uses: actions/upload-artifact@v4
-      with:
-        name: apostila-github
-        path: apostila_github.pdf
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: apostila-github
+          path: apostila_github.pdf
