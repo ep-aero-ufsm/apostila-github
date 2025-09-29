@@ -18,6 +18,8 @@ jobs:
         with:
           root_file: apostila_github.tex
           latexmk_use_xelatex: true
+          extra_fonts: |
+            ./fonts/*.ttf
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
