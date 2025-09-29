@@ -1,6 +1,6 @@
 # Apostila GitHub
 
-![Status do Build](https://github.com/ep-aero-ufsm/apostila-github/actions/workflows/build.yml/badge.svg)
+![Status do Build](https://github.com/ep-aero-ufsm/apostila-github/actions/workflows/latex.yml/badge.svg)
 
 Esta é a versão online da apostila do GitHub. O PDF é gerado automaticamente pelo workflow de CI/CD toda vez que há um push no branch `main`.
 

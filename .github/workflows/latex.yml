@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: apostila-github
-          path: apostila_github.pdf
+          path: apostila_github.pdf 
 
       - name: Commit PDF to repo
         run: |
