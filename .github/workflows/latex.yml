@@ -12,14 +12,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Setup TeX Live
-      run: sudo apt-get install -y texlive-full
+    - name: Install TeX Live
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-xetex texlive-latex-extra
 
     - name: Compile LaTeX
-      run: latexmk -pdf main.tex
+      run: |
+        latexmk -pdf -xelatex apostila_github.tex
+        latexmk -c
 
     - name: Upload PDF
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: apostila-github
         path: apostila_github.pdf
