@@ -1,0 +1,130 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazilian]{babel}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{indentfirst}
+\titleformat*{\section}{\large\bfseries}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage[lmargin=3cm,tmargin=3cm,rmargin=2cm,bmargin=2cm]{geometry}
+\usepackage{iftex}
+\usepackage{lipsum}
+% \ifPDFTeX
+%   \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+% \else
+%   \usepackage{microtype}
+% \fi
+\usepackage{caption}
+\usepackage{mathptmx}
+\usepackage{cancel}
+\usepackage{graphbox}
+% \usepackage{gensymb}
+\usepackage{amsmath}
+% \usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{placeins}
+\makeatletter
+\let\c@lofdepth\relax
+\makeatother
+\usepackage{tocloft}
+\usepackage{booktabs}
+% \usepackage{subfigure}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{0.5em}
+\captionsetup[figure]{labelsep= endash}
+
+
+% Define Shell style for listings
+\lstdefinestyle{shellstyle}{
+    backgroundcolor=\color{gray!10},    % light gray background
+    basicstyle=\ttfamily\small,         % monospace font, small size
+    numbers=left,                       % line numbers on the left
+    numberstyle=\tiny\color{gray},      % line number style
+    numbersep=8pt,                     % space between line numbers and code
+    frame=none,                       % no frame around the code
+    rulecolor=\color{black!30},
+    breaklines=true,                  % automatic line breaking
+    keywordstyle=\color{blue}\bfseries,   % keywords in bold blue
+    commentstyle=\color{green!50!black}\itshape, % comments in italic dark green
+    stringstyle=\color{red},           % strings in red
+    showstringspaces=false,            % no special string space marking
+    tabsize=4,
+    language=bash                   % MATLAB language support
+}
+
+\newcommand\ColocarImagemCapa{%
+  \AddToShipoutPictureBG*{%
+    \includegraphics[%
+      width=\paperwidth,
+      height=\paperheight,
+      keepaspectratio=false
+    ]{Imagens Gerais/capa.png}%
+  }%
+}
+
+\newcommand\ColocarImagemSumario{%
+  \AddToShipoutPictureBG*{%
+    \includegraphics[%
+      width=\paperwidth,
+      height=\paperheight,
+      keepaspectratio=false
+    ]{Imagens Gerais/sumário.png}%
+  }%
+}
+
+\newcommand{\logoep}{\includegraphics[height=1.3cm]{Imagens Gerais/Logo EP.jpg}}
+
+\newcommand{\logocurso}{\includegraphics[height=1.3cm]{Imagens Gerais/Logo Curso.jpg}}
+
+
+\pagestyle{fancy}
+\fancyhf{}  % Limpa os cabeçalhos e rodapés padrões
+\setlength{\headheight}{1.5cm}  % Ajusta a altura do cabeçalho para acomodar a logo
+\setlength{\headsep}{1.5cm}     % Ajusta o espaçamento entre o cabeçalho e o conteúdo
+
+% Definir logo no cabeçalho à esquerda
+\fancyhead[R]{\logoep}  % Coloca a logo à esquerda
+\fancyhead[L]{\logocurso}
+
+
+\setlength{\footskip}{1cm}  % Ajusta a altura do rodapé
+\setlength{\textheight}{23cm}
+
+\fancyfoot[C]{\textbf{\thepage}}  % Coloca o número da página no rodapé centralizado
+
+\begin{document}
+
+    \input{componentes/0_Capa}
+
+    \input{componentes/1_Introducao}
+
+    \input{componentes/2_ConceitosBasicos}
+
+    \input{componentes/3_PrimeirosPassos}
+    \input{componentes/4_RepositoriosRemotos}
+    
+
+    \input{componentes/5_Branching}
+
+    \input{componentes/6_Colaboracao}
+
+    \input{componentes/7_Recuperacao_e_versionamento}
+
+    \input{componentes/8_BoasPraticas}
+
+    \input{componentes/9_Exercicios}
+
+    \input{componentes/10_Referencias}
+
+    
+    
+\end{document}

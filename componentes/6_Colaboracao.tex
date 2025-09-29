@@ -1,0 +1,93 @@
+\newpage
+\section{Colaboração e Trabalho em Equipe}
+
+O Git é uma ferramenta poderosa para facilitar o trabalho colaborativo em projetos, permitindo que equipes trabalhem simultaneamente em diferentes partes de um projeto sem conflitos e com total rastreabilidade. Nesta seção, exploraremos como o Git pode ser utilizado para gerenciar contribuições de diferentes membros da equipe, revisar código e adotar boas práticas para garantir a eficiência e a organização do trabalho em grupo.
+
+\subsection{Pull Requests}
+
+O \textbf{Pull Request} (PR) é uma funcionalidade oferecida por plataformas como GitHub e GitLab que permite que um colaborador proponha alterações para um repositório. Ele é amplamente utilizado em projetos colaborativos para integrar contribuições de forma controlada e revisada.
+
+O fluxo básico de um Pull Request é o seguinte:
+\begin{enumerate}
+    \item O colaborador cria uma nova \textbf{branch} para desenvolver uma funcionalidade ou corrigir um problema.
+    \item Após realizar as alterações e fazer os \textit{commits}, o colaborador envia a branch para o repositório remoto.
+    \item No repositório remoto, o colaborador abre um Pull Request, descrevendo as alterações realizadas e o motivo delas.
+    \item Outros membros da equipe revisam o Pull Request, sugerem melhorias e aprovam as alterações.
+    \item Após a aprovação, as alterações são integradas à branch principal (\texttt{main} ou \texttt{master}) por meio de um \textit{merge}.
+\end{enumerate}
+
+Os Pull Requests são uma excelente forma de garantir que todas as alterações sejam revisadas antes de serem integradas ao projeto, promovendo a qualidade do código e a colaboração entre os membros da equipe.
+
+\subsection{Revisão de Código}
+
+A revisão de código é uma etapa essencial no trabalho colaborativo, pois permite que os membros da equipe avaliem as contribuições uns dos outros, identifiquem erros, sugiram melhorias e garantam a consistência do projeto. Durante a revisão de um Pull Request, os revisores devem:
+\begin{itemize}
+    \item Verificar se o código segue os padrões e boas práticas estabelecidos pela equipe.
+    \item Garantir que as alterações não introduzam erros ou quebras no projeto.
+    \item Testar as novas funcionalidades ou correções, quando aplicável.
+    \item Sugerir melhorias para tornar o código mais eficiente, legível ou organizado.
+\end{itemize}
+
+A revisão de código não deve ser vista como uma crítica pessoal, mas como uma oportunidade de aprendizado e melhoria contínua para toda a equipe. Ferramentas como comentários em Pull Requests no GitHub ou GitLab tornam esse processo mais eficiente e colaborativo.
+
+\subsection{Boas Práticas em Projetos de Equipe}
+
+Para garantir o sucesso de um projeto colaborativo, é importante adotar boas práticas no uso do Git. Algumas recomendações incluem:
+\begin{itemize}
+    \item \textbf{Criar branches para cada tarefa:} Cada funcionalidade ou correção deve ser desenvolvida em uma branch separada, com um nome descritivo, como \texttt{feature/simulacao} ou \texttt{bugfix/corrigir-grafico}.
+    \item \textbf{Escrever mensagens de commit claras:} Cada commit deve ter uma mensagem que explique de forma objetiva o que foi alterado, como \texttt{"Adiciona função para calcular resistência do ar"}.
+    \item \textbf{Sincronizar frequentemente:} Antes de iniciar uma nova tarefa, atualize sua branch local com as alterações mais recentes da branch principal para evitar conflitos.
+    \item \textbf{Resolver conflitos de forma colaborativa:} Quando conflitos de versão ocorrerem, discuta com os membros da equipe para decidir a melhor forma de resolvê-los.
+    \item \textbf{Revisar e testar antes de integrar:} Antes de fazer o \textit{merge} de uma branch, certifique-se de que todas as alterações foram revisadas e testadas.
+\end{itemize}
+
+Essas práticas ajudam a manter o projeto organizado, reduzir erros e promover um ambiente de trabalho colaborativo e produtivo.
+
+\subsection{Exemplo Prático: Contribuindo para um Repositório Compartilhado}
+
+%% ber - NECESSITA SER TOTALMENTE REFEITO E PENSADO, isso é um exemplo do gpt
+
+Vamos considerar um exemplo prático de colaboração em um projeto de simulação de voo atmosférico. Suponha que você e sua equipe estão desenvolvendo um modelo no MATLAB/Simulink e precisam adicionar uma nova funcionalidade para calcular a resistência do ar.
+
+\subsubsection*{Passo 1: Criar uma branch para a tarefa}
+
+No terminal, crie uma nova branch para desenvolver a funcionalidade:
+\begin{lstlisting}[style=shellstyle]
+git checkout -b feature/resistencia-ar
+\end{lstlisting}
+
+\subsubsection*{Passo 2: Fazer as alterações e commits}
+
+Implemente a funcionalidade no código e registre as alterações com commits claros:
+\begin{lstlisting}[style=shellstyle]
+git add simulacao.m
+git commit -m "Adiciona função para calcular resistência do ar"
+\end{lstlisting}
+
+\subsubsection*{Passo 3: Enviar a branch para o repositório remoto}
+
+Envie a branch para o repositório remoto para compartilhar seu trabalho:
+\begin{lstlisting}[style=shellstyle]
+git push origin feature/resistencia-ar
+\end{lstlisting}
+
+\subsubsection*{Passo 4: Abrir um Pull Request}
+
+No GitHub ou GitLab, abra um Pull Request para a branch \texttt{feature/resistencia-ar}, descrevendo as alterações realizadas.
+
+\subsubsection*{Passo 5: Revisar e integrar as alterações}
+
+Os membros da equipe revisam o Pull Request, sugerem melhorias e, após a aprovação, fazem o \textit{merge} da branch na branch principal:
+\begin{lstlisting}[style=shellstyle]
+git checkout main
+git merge feature/resistencia-ar
+\end{lstlisting}
+
+\subsubsection*{Passo 6: Atualizar o repositório local}
+
+Após o \textit{merge}, atualize seu repositório local para refletir as alterações mais recentes:
+\begin{lstlisting}[style=shellstyle]
+git pull origin main
+\end{lstlisting}
+
+Com esse fluxo, a equipe pode colaborar de forma eficiente, garantindo que todas as contribuições sejam revisadas, testadas e integradas de maneira

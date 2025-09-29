@@ -1,0 +1,158 @@
+\newpage
+\section{Primeiros Passos com Git}
+\subsection{Criando seu Primeiro Repositório}
+
+Um repositório é o local onde o Git armazena todo o histórico de alterações de um projeto. Ele pode ser \textbf{local} (no seu computador) ou \textbf{remoto} (em plataformas como GitHub ou GitLab). Criar seu primeiro repositório é o passo inicial para começar a versionar arquivos e acompanhar a evolução de seus projetos.
+
+Para estudantes de Engenharia Aeroespacial, um exemplo típico seria um projeto de simulação de voo, com arquivos MATLAB/Simulink, planilhas de dados e relatórios técnicos. Ao criar um repositório, todas essas informações podem ser organizadas, versionadas e recuperadas facilmente.
+
+\subsubsection*{Passo a Passo: Criando um Repositório Local}
+
+1. \textbf{Escolha ou crie uma pasta para seu projeto}  
+   Por exemplo, crie uma pasta chamada \texttt{simulacao\_orbital} no seu computador.
+
+2. \textbf{Abra o terminal}  
+   - No macOS ou Linux, use o \textit{Terminal}.  
+   - No Windows, abra o \textbf{Git Bash}.  
+   - Alternativamente, você pode usar o terminal integrado do \textbf{Visual Studio Code}.
+
+3. \textbf{Navegue até a pasta do projeto}
+
+
+\begin{lstlisting}[style=shellstyle]
+cd /caminho/para/simulacao_orbital
+\end{lstlisting}
+
+
+\textit{Comentário: O comando \texttt{cd} significa "change directory" e serve para trocar o diretório de trabalho atual no terminal. Assim, você garante que os próximos comandos do Git serão aplicados à pasta correta.}
+
+4. \textbf{Inicialize o repositório Git}  
+   Esse comando cria um repositório Git local na pasta atual, gerando a pasta oculta \texttt{.git} que armazenará o histórico do projeto:
+\begin{lstlisting}[style=shellstyle]
+git init
+\end{lstlisting}
+
+5. \textbf{Verifique se o repositório foi criado}  
+   Execute:
+\begin{lstlisting}[style=shellstyle]
+git status
+\end{lstlisting}
+O Git mostrará que você está em um repositório vazio e pronto para adicionar arquivos.
+
+
+\subsection{Rastreando Arquivos}
+
+Após criar seu repositório, o próximo passo é informar ao Git quais arquivos você deseja versionar. Esse processo é chamado de \textbf{staging}, ou preparação, e é realizado com o comando \texttt{git add}. Ele permite que você escolha exatamente quais alterações serão incluídas no próximo commit.
+
+\subsubsection*{Adicionando arquivos ao repositório}
+
+Para adicionar todos os arquivos da pasta do projeto, execute:
+
+\begin{lstlisting}[style=shellstyle]
+git add .
+\end{lstlisting}
+
+\noindent
+O ponto (\texttt{.}) indica que todos os arquivos e subpastas do diretório atual serão rastreados.  
+
+Se você quiser adicionar apenas arquivos específicos, use:
+
+\begin{lstlisting}[style=shellstyle]
+git add simulacao.m relatorio.pdf
+\end{lstlisting}
+
+\subsubsection*{Ignorando arquivos desnecessários}
+
+Em projetos de engenharia aeroespacial, é comum gerar arquivos temporários ou grandes que não precisam ser versionados, como:  
+- Logs de simulação (\texttt{*.log})  
+- Arquivos de saída do Simulink (\texttt{*.slx~})  
+- Dados intermediários ou temporários (\texttt{*.mat}, \texttt{*.tmp})
+
+Para evitar que esses arquivos sejam rastreados, crie um arquivo chamado \texttt{.gitignore} na raiz do projeto e adicione as regras:
+
+\begin{lstlisting}[style=shellstyle]
+*.log
+*.slx~
+*.tmp
+*.mat
+\end{lstlisting}
+
+Dessa forma, o Git ignorará automaticamente esses arquivos ao executar \texttt{git add}.
+
+---
+
+\subsection{Fazendo seu Primeiro Commit}
+
+Depois de adicionar os arquivos desejados à área de staging, o próximo passo é registrar essas alterações no repositório através de um \textbf{commit}. Um commit funciona como um “ponto de restauração” no histórico do projeto, permitindo recuperar versões anteriores a qualquer momento.
+
+\subsubsection*{Criando um commit}
+
+Para fazer o primeiro commit, execute:
+
+\begin{lstlisting}[style=shellstyle]
+git commit -m "Primeiro commit: estrutura inicial do projeto"
+\end{lstlisting}
+
+\noindent
+A opção \texttt{-m} permite adicionar uma mensagem descritiva para o commit. Mensagens claras ajudam você e sua equipe a entender rapidamente o que foi alterado em cada commit.
+
+\subsubsection*{Verificando o commit}
+
+Após o commit, você pode conferir o histórico do repositório:
+
+\begin{lstlisting}[style=shellstyle]
+git log
+\end{lstlisting}
+
+O Git exibirá informações como:
+\begin{itemize}
+    \item Identificador único do commit (hash)  
+    \item Autor do commit  
+    \item Data e hora do commit  
+    \item Mensagem do commit
+\end{itemize}
+
+%  ACHEI ESSE EXEMPLO MT REPETITIVO COM O PROXIMO - SECAO 4
+
+% \subsection{Exemplo Prático: Primeiro Repositório Local}
+
+% \subsection{Exemplo Prático: Primeiro Repositório Local}
+
+% Vamos aplicar todo o conteúdo aprendido até agora para criar e versionar um projeto simples de simulação de voo.
+
+% \subsubsection*{Passo 1: Criar a pasta do projeto}
+
+% Crie uma pasta chamada \texttt{simulacao\_orbital} e adicione alguns arquivos de exemplo:
+
+% \begin{itemize}
+%     \item \texttt{simulacao.m} – código MATLAB de uma simulação de trajetória  
+%     \item \texttt{modelo.slx} – modelo Simulink do sistema  
+%     \item \texttt{relatorio.pdf} – relatório técnico inicial
+% \end{itemize}
+
+% \subsubsection*{Passo 2: Inicializar o repositório}
+
+% \begin{lstlisting}[style=shellstyle]
+% cd /caminho/para/simulacao_orbital
+% git init
+% \end{lstlisting}
+
+% \subsubsection*{Passo 3: Adicionar arquivos à staging area}
+
+% \begin{lstlisting}[style=shellstyle]
+% git add .
+% \end{lstlisting}
+
+% \subsubsection*{Passo 4: Fazer o primeiro commit}
+
+% \begin{lstlisting}[style=shellstyle]
+% git commit -m "Primeiro commit: arquivos iniciais do projeto de simulação"
+% \end{lstlisting}
+
+% \subsubsection*{Passo 5: Verificar o histórico}
+
+% \begin{lstlisting}[style=shellstyle]
+% git log
+% \end{lstlisting}
+
+% O Git exibirá o commit realizado, com o identificador, autor, data e a mensagem associada.

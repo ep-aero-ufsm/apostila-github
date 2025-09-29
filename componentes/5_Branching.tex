@@ -1,0 +1,109 @@
+\newpage
+\section{Branching e Merging}
+
+O uso de \textbf{branches} (ramificações) é um dos recursos mais poderosos do Git para organizar o desenvolvimento de projetos colaborativos. Branches permitem que diferentes funcionalidades, correções ou experimentos sejam desenvolvidos de forma independente, sem afetar o código principal do projeto. Após o desenvolvimento e testes, as alterações podem ser integradas ao projeto principal por meio do processo de \textbf{merge} (mesclagem).
+
+\subsection{Introdução aos Branches}
+
+Um \textbf{branch} é uma linha de desenvolvimento separada dentro do repositório Git. Por padrão, todo repositório possui um branch principal chamado \texttt{main} (ou \texttt{master}). Ao criar branches, você pode trabalhar em novas funcionalidades, corrigir bugs ou testar ideias sem interferir no código estável do projeto.
+
+Branches são especialmente úteis em equipes, pois cada membro pode trabalhar em sua própria tarefa e, depois de pronta, integrar as alterações ao branch principal.
+
+\subsection{Criando e Mudando de Branch}
+
+Para criar um novo branch, utilize o comando:
+
+\begin{lstlisting}[style=shellstyle]
+git branch nome-da-branch
+\end{lstlisting}
+
+Para alternar para o branch criado:
+
+\begin{lstlisting}[style=shellstyle]
+git checkout nome-da-branch
+\end{lstlisting}
+
+Ou, de forma combinada:
+
+\begin{lstlisting}[style=shellstyle]
+git checkout -b nome-da-branch
+\end{lstlisting}
+
+Exemplo: Para desenvolver uma nova funcionalidade de simulação, crie um branch chamado \texttt{feature/simulacao}:
+
+\begin{lstlisting}[style=shellstyle]
+git checkout -b feature/simulacao
+\end{lstlisting}
+
+\subsection{Mesclando Branches}
+
+Após finalizar o desenvolvimento em um branch, é necessário integrar as alterações ao branch principal. Isso é feito com o comando \texttt{merge}:
+
+\begin{lstlisting}[style=shellstyle]
+git checkout main
+git merge feature/simulacao
+\end{lstlisting}
+
+O Git irá combinar as alterações do branch \texttt{feature/simulacao} ao branch \texttt{main}. Se não houver conflitos, o merge será realizado automaticamente.
+
+\subsection{Resolvendo Conflitos de Merge}
+
+Conflitos de merge ocorrem quando duas ou mais pessoas modificam a mesma linha de um arquivo em branches diferentes. O Git sinaliza o conflito e pede que o usuário escolha qual versão manter.
+
+Ao realizar um merge e encontrar um conflito, o arquivo afetado exibirá marcações como:
+
+\begin{verbatim}
+<<<<<<< HEAD
+Conteúdo da branch atual
+=======
+Conteúdo da branch a ser mesclado
+>>>>>>> feature/simulacao
+\end{verbatim}
+
+Para resolver o conflito, edite o arquivo, escolha o conteúdo correto e remova as marcações. Depois, finalize o merge:
+
+\begin{lstlisting}[style=shellstyle]
+git add arquivo-afetado.ext
+git commit -m "Resolve conflito de merge"
+\end{lstlisting}
+
+\subsection{Rebasing (Opcional)}
+
+O \textbf{rebase} é uma alternativa ao merge para integrar alterações de um branch ao outro. Ele reorganiza o histórico de commits, tornando-o mais linear. O comando básico é:
+
+\begin{lstlisting}[style=shellstyle]
+git checkout feature/simulacao
+git rebase main
+\end{lstlisting}
+
+O rebase é útil para manter um histórico limpo, mas deve ser usado com cautela em projetos colaborativos, pois pode reescrever o histórico de commits.
+
+\subsection{Exemplo Prático: Fluxo de Trabalho com Branches de Funcionalidade}
+
+Imagine que sua equipe está desenvolvendo um projeto de simulação de voo e precisa adicionar uma nova funcionalidade para calcular a altitude máxima.
+
+\begin{enumerate}
+    \item \textbf{Criar um branch para a funcionalidade:}
+    \begin{lstlisting}[style=shellstyle]
+git checkout -b feature/altitude-maxima
+    \end{lstlisting}
+    \item \textbf{Desenvolver e commitar as alterações:}
+    \begin{lstlisting}[style=shellstyle]
+git add simulacao.m
+git commit -m "Adiciona cálculo de altitude máxima"
+    \end{lstlisting}
+    \item \textbf{Mesclar o branch ao principal:}
+    \begin{lstlisting}[style=shellstyle]
+git checkout main
+git merge feature/altitude-maxima
+    \end{lstlisting}
+    \item \textbf{Resolver conflitos, se houver, e finalizar o merge:}
+    \begin{lstlisting}[style=shellstyle]
+git add simulacao.m
+git commit -m "Resolve conflito e integra cálculo de altitude máxima"
+    \end{lstlisting}
+\end{enumerate}
+
+Esse fluxo permite que diferentes funcionalidades sejam desenvolvidas em paralelo, testadas e integradas ao projeto principal de forma organizada e segura.
+
+

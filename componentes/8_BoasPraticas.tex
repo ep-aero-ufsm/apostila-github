@@ -1,0 +1,67 @@
+\newpage
+\section{Boas Práticas}
+
+Adotar boas práticas no uso do Git é essencial para garantir a organização, a rastreabilidade e a eficiência dos projetos colaborativos. Nesta seção, abordamos recomendações para escrever mensagens de commit claras, organizar repositórios, evitar erros comuns e implementar metodologias de desenvolvimento como o GitFlow.
+
+\subsection{Escrevendo Bons Commit Messages}
+
+Mensagens de commit bem escritas facilitam o entendimento do histórico do projeto e ajudam toda a equipe a acompanhar as alterações. Recomendações:
+\begin{itemize}
+    \item Seja objetivo e claro: descreva o que foi alterado e por quê.
+    \item Evite mensagens genéricas como \texttt{"Update"} ou \texttt{"Correções"}.
+    \item Se necessário, adicione uma descrição mais detalhada após a primeira linha.
+\end{itemize}
+
+\subsection{Organizando Repositórios}
+
+Um repositório bem organizado facilita a navegação e o entendimento do projeto. Dicas:
+\begin{itemize}
+    \item Mantenha uma estrutura de pastas lógica (ex: \texttt{src/}, \texttt{docs/}, \texttt{data/}).
+    \item Utilize arquivos \texttt{README.md} para documentar o objetivo do projeto e instruções de uso.
+    \item Adote o \texttt{.gitignore} para evitar versionar arquivos desnecessários ou temporários.
+    \item Padronize nomes de arquivos e pastas.
+\end{itemize}
+
+\subsection{Erros Comuns a Evitar}
+
+Alguns erros podem comprometer a organização e a colaboração no projeto:
+\begin{itemize}
+    \item Versionar arquivos grandes ou gerados automaticamente (ex: \texttt{.mat}, \texttt{.exe}, \texttt{.log}).
+    \item Realizar commits diretamente na branch principal sem revisão.
+    \item Não atualizar o repositório local antes de iniciar novas tarefas.
+    \item Mensagens de commit vagas ou sem contexto.
+    \item Não resolver conflitos de merge corretamente.
+\end{itemize}
+
+\subsection{Assinatura de Commits (Opcional)}
+
+Assinar commits com uma chave GPG garante autenticidade e segurança, especialmente em projetos públicos ou críticos. Para configurar:
+\begin{lstlisting}[style=shellstyle]
+git config --global user.signingkey <ID-da-chave>
+git commit -S -m "Mensagem assinada"
+\end{lstlisting}
+Mais detalhes podem ser encontrados na documentação oficial do Git: \url{https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work}
+
+\subsection{GitFlow - Metodologia de Desenvolvimento Colaborativo}
+
+O \textbf{GitFlow} é uma metodologia que define um fluxo de trabalho estruturado para equipes que usam Git. Ele organiza o desenvolvimento em diferentes tipos de branches, cada um com uma finalidade específica:
+\begin{itemize}
+    \item \texttt{main} (ou \texttt{master}): branch principal, sempre estável.
+    \item \texttt{develop}: branch de desenvolvimento, onde novas funcionalidades são integradas antes de serem lançadas.
+    \item \texttt{feature/*}: branches para desenvolvimento de novas funcionalidades.
+    \item \texttt{release/*}: branches para preparação de novas versões.
+    \item \texttt{hotfix/*}: branches para correção rápida de bugs em produção.
+\end{itemize}
+
+O GitFlow facilita o gerenciamento de múltiplas tarefas simultâneas, garante que o código principal permaneça estável e organiza o processo de lançamento de versões.
+
+Para implementar o GitFlow, existem extensões e ferramentas que automatizam o processo. O documento original do GitFlow pode ser acessado em: \url{https://nvie.com/posts/a-successful-git-branching-model/}
+
+Adotar o GitFlow em projetos colaborativos aumenta a produtividade, reduz conflitos e torna o ciclo de desenvolvimento mais previsível.
+
+
+\begin{quote}
+\textbf{Nota:}
+A leitura do documento oficial do GitFlow é fortemente recomendada. Uma boa compreensão dessa metodologia colaborativa esclarece o funcionamento de um repositório Git bem estruturado e contribui para o sucesso de projetos versionados em equipe.
+\end{quote}
+
