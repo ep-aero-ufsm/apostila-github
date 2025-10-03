@@ -79,8 +79,6 @@ Para evitar que esses arquivos sejam rastreados, crie um arquivo chamado \texttt
 
 Dessa forma, o Git ignorará automaticamente esses arquivos ao executar \texttt{git add}.
 
----
-
 \subsection{Fazendo seu Primeiro Commit}
 
 Depois de adicionar os arquivos desejados à área de staging, o próximo passo é registrar essas alterações no repositório através de um \textbf{commit}. Um commit funciona como um “ponto de restauração” no histórico do projeto, permitindo recuperar versões anteriores a qualquer momento.
@@ -111,48 +109,3 @@ O Git exibirá informações como:
     \item Data e hora do commit  
     \item Mensagem do commit
 \end{itemize}
-
-%  ACHEI ESSE EXEMPLO MT REPETITIVO COM O PROXIMO - SECAO 4
-
-% \subsection{Exemplo Prático: Primeiro Repositório Local}
-
-% \subsection{Exemplo Prático: Primeiro Repositório Local}
-
-% Vamos aplicar todo o conteúdo aprendido até agora para criar e versionar um projeto simples de simulação de voo.
-
-% \subsubsection*{Passo 1: Criar a pasta do projeto}
-
-% Crie uma pasta chamada \texttt{simulacao\_orbital} e adicione alguns arquivos de exemplo:
-
-% \begin{itemize}
-%     \item \texttt{simulacao.m} – código MATLAB de uma simulação de trajetória  
-%     \item \texttt{modelo.slx} – modelo Simulink do sistema  
-%     \item \texttt{relatorio.pdf} – relatório técnico inicial
-% \end{itemize}
-
-% \subsubsection*{Passo 2: Inicializar o repositório}
-
-% \begin{lstlisting}[style=shellstyle]
-% cd /caminho/para/simulacao_orbital
-% git init
-% \end{lstlisting}
-
-% \subsubsection*{Passo 3: Adicionar arquivos à staging area}
-
-% \begin{lstlisting}[style=shellstyle]
-% git add .
-% \end{lstlisting}
-
-% \subsubsection*{Passo 4: Fazer o primeiro commit}
-
-% \begin{lstlisting}[style=shellstyle]
-% git commit -m "Primeiro commit: arquivos iniciais do projeto de simulação"
-% \end{lstlisting}
-
-% \subsubsection*{Passo 5: Verificar o histórico}
-
-% \begin{lstlisting}[style=shellstyle]
-% git log
-% \end{lstlisting}
-
-% O Git exibirá o commit realizado, com o identificador, autor, data e a mensagem associada.

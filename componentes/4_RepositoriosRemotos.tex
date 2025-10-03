@@ -34,16 +34,16 @@ Após criar sua conta, é hora de criar o repositório remoto:
 
 \subsubsection*{Conectando seu repositório local ao remoto}
 
-Depois de criar o repositório remoto, copie a URL HTTPS do repositório, por exemplo:
+Depois de criar o repositório remoto, copie a URL SSH\footnote{Caso a configuração inicial da chave SSH já tenha sido feita conforme mostrado na seção \ref{cap:criacao_chave_ssh}, escolha a opção SSH. Senão, você poderá usar a opção HTTPS. Nesse caso, configurações adicionais poderão ser necessárias, as quais não serão discutidas nessa apostila.} do repositório, por exemplo:
 
 \begin{verbatim}
-https://github.com/seu-usuario/simulacao_orbital.git
+git@github.com:seu-usuario/simulacao_orbital.git
 \end{verbatim}
 
 No terminal, dentro da pasta do seu projeto local, execute:
 
 \begin{lstlisting}[style=shellstyle]
-git remote add origin https://github.com/seu-usuario/simulacao_orbital.git
+git remote add origin git@github.com:seu-usuario/simulacao_orbital.git
 \end{lstlisting}
 
 \noindent
@@ -78,9 +78,9 @@ git push origin main
 \noindent
 - \texttt{origin} é o nome do repositório remoto.  
 - \texttt{main} é o nome do branch principal.  
-- Ao usar HTTPS, o Git solicitará seu nome de usuário e senha ou token pessoal.
 
----
+- Ao usar HTTPS, o Git solicitará seu nome de usuário e senha ou token pessoal.
+- Se usar SSH, você não terá nada a fazer.
 
 \subsection{Atualizando seu Repositório}
 

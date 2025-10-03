@@ -249,6 +249,7 @@ Em seguida, edite as informações do seu perfil da maneira como desejar.
 \end{enumerate}
 
 \subsection{Criação de uma chave SSH}
+\label{cap:criacao_chave_ssh}
 
 Para trabalhar com o GitHub, é possível realizar a comunicação com a plataforma de duas formas principais: HTTPS ou SSH.
 
@@ -274,13 +275,13 @@ A chave privada deve permanecer no computador e nunca ser compartilhada. A chave
 
 Para adicionar sua chave pública ao Github, primeiramente, copie os conteúdos do arquivo \texttt{id\_ed25519.pub}. Para fazer isso, use:
 
-    \begin{lstlisting}[style=shellstyle]
+\begin{lstlisting}[style=shellstyle]
 cat ~/.ssh/id_ed25519.pub
 \end{lstlisting}
 
 O comando \texttt{cat} mostra no terminal os conteúdos de um arquivo. Copie a chave mostrada. Ela deve ter o seguinte formato:
 
-    \begin{lstlisting}[style=shellstyle]
+\begin{lstlisting}[style=shellstyle]
 ssh-ed25519 <caracteres-aleatórios> seu-email@exemplo.com
 \end{lstlisting}
 
