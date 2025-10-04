@@ -13,8 +13,20 @@ O PDF gerado pelo workflow pode ser acessado publicamente neste link:
 
 > Nota: O PDF é atualizado automaticamente a cada commit no branch `main`.
 
-## Contribuições
+## Contribua para essa apostila
 
 Sinta-se à vontade para enviar sugestões, abrir issues ou pull requests. A construção do PDF é automática, então qualquer alteração no `.tex` será refletida na próxima versão gerada.
 
-Antes de enviar suas modificações para o repositório, verifique que o PDF compila e exibe as suas contribuções corretamente. Isso pode ser feito usando o script fornecido, `compilar_local.sh`. Esse script gera um PDF que não é enviado ao repositório remoto, chamado `apostila_github_local.pdf`.
+Antes de enviar suas modificações para o repositório, verifique que o PDF compila localmente e exibe as suas contribuções corretamente. Isso pode ser feito usando o script fornecido, `compilar_local.sh`. Esse script gera um PDF que não é enviado ao repositório remoto, chamado `apostila_github_local.pdf`.
+
+Ao enviar suas contribuições, adicione seu nome na lista de contribuidores a seguir para que fique registrado todos aqueles que, de alguma forma ou outra, contribuíram para o sucesso dessa apostila.
+
+## Autores
+
+Antônio C. Kipper Filho
+Bernardo Eckert Recktenvald
+
+## Contribuidores
+
+...
+
