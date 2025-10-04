@@ -23,8 +23,8 @@ Ao enviar suas contribuições, adicione seu nome na lista de contribuidores a s
 
 ## Autores
 
-Antônio C. Kipper Filho
-Bernardo Eckert Recktenvald
+- Antônio C. Kipper Filho
+- Bernardo Eckert Recktenvald
 
 ## Contribuidores
 
