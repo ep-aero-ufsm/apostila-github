@@ -212,3 +212,121 @@ git commit -m "Mensagem clara sobre a alteração"
 
 Esses exercícios proporcionam experiência prática com os principais comandos e fluxos de trabalho do Git, preparando você para atuar em projetos reais de engenharia
 
+\subsection{Contribuindo com as apostilas da EP Aero no Github}
+
+Todas as apostilas da EP Aero são disponibilizadas publicamente e de forma gratuita no Github. Os autores da apostila incentivam a contribuição dos leitores para aprimorar o conteúdo, corrigir erros e sugerir melhorias.
+
+Para fazer isso, siga o passo-a-passo a seguir:
+
+\begin{itemize}
+        \item Acesse o repositório da apostila no Github: \url{https://github.com/ep-aero-ufsm/apostila-github}
+        \item Faça um \textit{fork} do repositório para sua conta. Para fazer isso, você pode usar a interface web do Github, como mostrado nas figuras \ref{fig:1_fork} e \ref{fig:2_fork}.
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/1_fork.png}
+        \caption{Como criar um fork do repositório - etapa 1.}
+        \label{fig:1_fork}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/2_fork.png}
+        \caption{Como criar um fork do repositório - etapa 2.}
+        \label{fig:2_fork}
+    \end{figure}
+
+        \item Você pode alterar o nome do repositório e a descrição como desejar. Neste exemplo, o nome do repositório foi mantido igual (apostila-github).
+        \item Clone o repositório forkado para seu computador. Nesse momento, você pode usar o link SSH caso já tenha configurado:
+        \begin{lstlisting}[style=shellstyle]
+git clone git@github.com:seu-usuario/apostila-github.git
+        \end{lstlisting}
+        \item Crie um branch para sua contribuição:
+        \begin{lstlisting}[style=shellstyle]
+git checkout -b minha-contribuicao
+        \end{lstlisting}
+        \item Faça as alterações desejadas (correções, melhorias, adição de conteúdo). Por exemplo, foi identificado que a exibição dos nomes dos autores estava incorreta no README do repositório, como mostrado na figura \ref{fig:README_antes_modif}.
+
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/README_antes_modif.png}
+        \caption{README com erro de formatação.}
+        \label{fig:README_antes_modif}
+    \end{figure}
+
+        \item Na sequência, foram feitas as seguintes modificações:
+
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/README_modif.png}
+        \caption{Modificações no README - adicionar "-" antes de cada nome para exibição correta como item.}
+        \label{fig:README_modif}
+    \end{figure}
+
+        \item O resultado esperado é este:
+
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/README_depois_modif.png}
+        \caption{README corrigido.}
+        \label{fig:README_depois_modif}
+    \end{figure}
+
+        \item Adicione, faça commit e envie para seu repositório:
+        \begin{lstlisting}[style=shellstyle]
+git add .
+git commit -m "Descreva sua contribuição"
+git push origin minha-contribuicao
+        \end{lstlisting}
+
+        \item Na sequência, abra novamente o seu repositório no Github e navegue para a branch de contribuições:
+
+         \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/navegando_branch.png}
+        \caption{Navegue para a branch minha-contribuicao.}
+        \label{fig:navegando_branch}
+    \end{figure}
+
+        \item Abra um \textit{Pull Request} no repositório original da EP Aero pelo Github. Para fazer isso, siga os passos a seguir:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/abrir_pull_request.png}
+        \caption{Abra um pull request na sua branch.}
+        \label{fig:abrir_pr}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/configurando_pull_request.png}
+        \caption{Descreva o pull request. Use um título e uma descrição concisa, mas precisa.}
+        \label{fig:configurar_pr}
+    \end{figure}
+
+    \item Na sequência, um dos mantedores do repositório da EP Aero UFSM irá analisar seu pull request, e poderá ou aceitá-lo diretamente, ou rejeitá-lo pedindo algum tipo de correção. Caso esse seja o caso, você receberá uma mensagem como esta no seu pull request:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/pr_rejeitado.png}
+        \caption{Pull request rejeitado - os mantedores solicitam modificações.}
+        \label{fig:pr_rejeitado}
+    \end{figure}
+
+    \item Você deve então fazer um novo commit na sua branch com as correções pedidas. O novo commit aparecerá automaticamente no Pull Request que você havia enviado antes:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/replica_pr.png}
+        \caption{Mudança no PR após solicitação de correção.}
+        \label{fig:replica_pr}
+    \end{figure}
+
+    \item Quando o PR for aceito, ele aparecerá na história de commits da branch principal do repositório da EP Aero: 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/tutorial_contribuicao/resultado_pr.png}
+        \caption{Resultado final após merge do PR.}
+        \label{fig:resultado_pr}
+    \end{figure}
+\end{itemize}
