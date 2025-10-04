@@ -25,6 +25,7 @@ Ao enviar suas contribuições, adicione seu nome na lista de contribuidores a s
 
 - Antônio C. Kipper Filho
 - Bernardo Eckert Recktenvald
+- Fulano
 
 ## Contribuidores
 
