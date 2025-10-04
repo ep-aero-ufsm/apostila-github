@@ -1,11 +1,11 @@
 \newpage
 \section{Branching e Merging}
 
-O uso de \textbf{branches} (ramificações) é um dos recursos mais poderosos do Git para organizar o desenvolvimento de projetos colaborativos. Branches permitem que diferentes funcionalidades, correções ou experimentos sejam desenvolvidos de forma independente, sem afetar o código principal do projeto. Após o desenvolvimento e testes, as alterações podem ser integradas ao projeto principal por meio do processo de \textbf{merge} (mesclagem).
+O uso de branches (ramificações) é um dos recursos mais poderosos do Git para organizar o desenvolvimento de projetos colaborativos. Branches permitem que diferentes funcionalidades, correções ou experimentos sejam desenvolvidos de forma independente, sem afetar o código principal do projeto. Após o desenvolvimento e testes, as alterações podem ser integradas ao projeto principal por meio do processo de merge (mesclagem).
 
 \subsection{Introdução aos Branches}
 
-Um \textbf{branch} é uma linha de desenvolvimento separada dentro do repositório Git. Por padrão, todo repositório possui um branch principal chamado \texttt{main} (ou \texttt{master}). Ao criar branches, você pode trabalhar em novas funcionalidades, corrigir bugs ou testar ideias sem interferir no código estável do projeto.
+Um branch é uma linha de desenvolvimento separada dentro do repositório Git. Por padrão, todo repositório possui um branch principal chamado \texttt{main} (ou \texttt{master}). Ao criar branches, você pode trabalhar em novas funcionalidades, corrigir bugs ou testar ideias sem interferir no código estável do projeto.
 
 Branches são especialmente úteis em equipes, pois cada membro pode trabalhar em sua própria tarefa e, depois de pronta, integrar as alterações ao branch principal.
 
@@ -69,7 +69,7 @@ git commit -m "Resolve conflito de merge"
 
 \subsection{Rebasing (Opcional)}
 
-O \textbf{rebase} é uma alternativa ao merge para integrar alterações de um branch ao outro. Ele reorganiza o histórico de commits, tornando-o mais linear. O comando básico é:
+O rebase é uma alternativa ao merge para integrar alterações de um branch ao outro. Ele reorganiza o histórico de commits, tornando-o mais linear. O comando básico é:
 
 \begin{lstlisting}[style=shellstyle]
 git checkout feature/simulacao

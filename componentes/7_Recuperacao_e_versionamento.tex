@@ -10,7 +10,7 @@ O histórico de commits permite acompanhar todas as alterações feitas no proje
 git log
 \end{lstlisting}
 
-No GitHub, acesse a aba \textbf{Commits} do repositório para ver o histórico online, incluindo autor, data e mensagem de cada commit.
+No GitHub, acesse a aba Commits do repositório para ver o histórico online, incluindo autor, data e mensagem de cada commit.
 
 \subsection{Recuperação de Arquivos ou Versões Anteriores}
 
@@ -26,7 +26,7 @@ Caso seja necessário restaurar todo o projeto para um estado anterior, utilize:
 git checkout <hash-do-commit>
 \end{lstlisting}
 
-Nesse caso, tenha atenção: ao fazer isso, o Git colocará o repositório em um estado chamado \textbf{detached HEAD}. Isso significa que você estará apenas \textbf{visitando} um commit antigo, e não estará mais no seu branch atual (por exemplo, \texttt{main} ou \texttt{develop}).  
+Nesse caso, tenha atenção: ao fazer isso, o Git colocará o repositório em um estado chamado \textbf{detached HEAD}. Isso significa que você estará apenas visitando um commit antigo, e não estará mais no seu branch atual (por exemplo, \texttt{main} ou \texttt{develop}).  
 
 Se o seu objetivo for apenas consultar o estado do projeto ou recuperar arquivos antigos, isso não é um problema. No entanto, se você fizer alterações e criar novos commits nesse estado, eles não estarão vinculados a nenhum branch e poderão ser perdidos ao trocar de branch.  
 
@@ -36,13 +36,13 @@ Se você quiser apenas olhar um commit antigo, depois de terminar, basta voltar 
 git checkout main
 \end{lstlisting}
 
-Por outro lado, se o objetivo for \textbf{continuar trabalhando a partir de um commit antigo}, o recomendado é criar um novo branch antes de fazer alterações. Isso garante que seus novos commits fiquem salvos com segurança:
+Por outro lado, se o objetivo for continuar trabalhando a partir de um commit antigo, o recomendado é criar um novo branch antes de fazer alterações. Isso garante que seus novos commits fiquem salvos com segurança:
 
 \begin{lstlisting}[style=shellstyle]
 git checkout -b meu-novo-branch <hash-do-commit>
 \end{lstlisting}
 
-Dessa forma, você cria um branch começando do commit escolhido e evita problemas com o modo \textbf{detached HEAD}.  
+Dessa forma, você cria um branch começando do commit escolhido e evita problemas com o modo detached HEAD.  
 
 \subsection{Reversão de Commits (Undo/Revert/Reset)}
 
@@ -68,7 +68,7 @@ Para comparar as diferenças entre dois commits, utilize:
 git diff <hash1> <hash2>
 \end{lstlisting}
 
-No GitHub, selecione dois commits ou branches e use a aba \textbf{Compare} para visualizar as diferenças entre eles.
+No GitHub, selecione dois commits ou branches e use a aba Compare para visualizar as diferenças entre eles.
 
 \subsection{Criação de Tags e Releases}
 
@@ -79,7 +79,7 @@ git tag -a v1.0 -m "Versão 1.0"
 git push origin v1.0
 \end{lstlisting}
 
-No GitHub, utilize a aba \textbf{Releases} para criar e gerenciar versões do projeto.
+No GitHub, utilize a aba Releases para criar e gerenciar versões do projeto.
 
 \subsection{Uso de Branches para Versionamento Seguro}
 
@@ -105,4 +105,4 @@ O comando \texttt{git log} também pode ser usado com filtros para auditoria det
 git log -p <nome-do-arquivo>
 \end{lstlisting}
 
-No GitHub, use a opção \textbf{Blame} na visualização de arquivos para
+No GitHub, use a opção Blame na visualização de arquivos para

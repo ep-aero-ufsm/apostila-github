@@ -4,7 +4,7 @@
 
 Durante a graduação em Engenharia Aeroespacial, os estudantes frequentemente trabalham em projetos que envolvem diversos arquivos, como relatórios, códigos de simulação, diagramas, modelos matemáticos e documentação técnica. Esses projetos evoluem constantemente: novos recursos são adicionados, erros são corrigidos e diferentes versões dos arquivos são criadas ao longo do tempo. Em equipes, esse processo torna-se ainda mais complexo, pois várias pessoas modificam os mesmos arquivos simultaneamente.
 
-Em um cenário sem controle de versão, os problemas aparecem rapidamente. Imagine um grupo de estudantes desenvolvendo um modelo de dinâmica orbital no \textit{MATLAB/Simulink} para uma disciplina de Mecânica Espacial. Cada integrante precisa ajustar parâmetros, modificar funções e atualizar gráficos. Sem uma ferramenta adequada, seria comum surgirem situações como:
+Em um cenário sem controle de versão, os problemas aparecem rapidamente. Imagine um grupo de estudantes desenvolvendo um modelo de dinâmica orbital no MATLAB/Simulink para uma disciplina de Mecânica Espacial. Cada integrante precisa ajustar parâmetros, modificar funções e atualizar gráficos. Sem uma ferramenta adequada, seria comum surgirem situações como:
 
 \begin{itemize}
     \item Várias cópias do mesmo arquivo com nomes diferentes, como \texttt{simulacao\_final.m}, \texttt{simulacao\_final\_corrigida.m} ou \texttt{simulacao\_nova\_versao\_FINAL.m};
@@ -16,7 +16,7 @@ Em um cenário sem controle de versão, os problemas aparecem rapidamente. Imagi
 
 Agora, considere outro exemplo: um projeto interdisciplinar envolvendo a modelagem aerodinâmica de um veículo hipersônico. Os alunos trabalham com diversos tipos de arquivos — simulações de dinâmica de fluidos, códigos de processamento de dados, gráficos de desempenho, relatórios técnicos e apresentações. Sem um sistema organizado, fica praticamente impossível coordenar todas as contribuições, documentar mudanças e garantir que os resultados sejam confiáveis.
 
-É nesse contexto que entra o \textbf{Git}, um sistema de \textit{controle de versão distribuído} que permite:
+É nesse contexto que entra o Git, um sistema de controle de versão distribuído que permite:
 
 \begin{itemize}
     \item Registrar todas as alterações realizadas no projeto, criando um histórico completo e detalhado;
@@ -26,37 +26,37 @@ Agora, considere outro exemplo: um projeto interdisciplinar envolvendo a modelag
     \item Retornar facilmente para versões anteriores, caso seja necessário corrigir erros ou recuperar resultados antigos.
 \end{itemize}
 
-O Git funciona como uma \textbf{“linha do tempo”} do projeto. Cada modificação feita nos arquivos pode ser registrada em um \textit{commit}, criando um ponto de restauração com informações sobre quem alterou, quando alterou e por quê. Isso é especialmente útil em trabalhos acadêmicos e projetos colaborativos, pois permite que todos acompanhem o histórico e a evolução dos resultados.
+O Git funciona como uma “linha do tempo” do projeto. Cada modificação feita nos arquivos pode ser registrada em um commit, criando um ponto de restauração com informações sobre quem alterou, quando alterou e por quê. Isso é especialmente útil em trabalhos acadêmicos e projetos colaborativos, pois permite que todos acompanhem o histórico e a evolução dos resultados.
 
-Além disso, quando combinado com plataformas como o \textit{GitHub} e o \textit{GitLab}, o Git potencializa a colaboração entre equipes, permitindo que os integrantes compartilhem seus projetos, revisem código, comentem alterações e integrem contribuições de forma organizada. Para estudantes de Engenharia Aeroespacial, isso significa maior eficiência no desenvolvimento de simulações, controle de modelos complexos e integração de dados experimentais.
+Além disso, quando combinado com plataformas como o GitHub e o GitLab, o Git potencializa a colaboração entre equipes, permitindo que os integrantes compartilhem seus projetos, revisem código, comentem alterações e integrem contribuições de forma organizada. Para estudantes de Engenharia Aeroespacial, isso significa maior eficiência no desenvolvimento de simulações, controle de modelos complexos e integração de dados experimentais.
 
 Em resumo, o Git não é apenas uma ferramenta para desenvolvedores de software: ele é um aliado fundamental no gerenciamento de projetos de engenharia. Ele garante organização, segurança, rastreabilidade e colaboração, preparando os estudantes para lidar com desafios acadêmicos e profissionais, tanto na universidade quanto na indústria aeroespacial.
 
 \subsection{O que é Git}
 
-O \textbf{Git} é um \textit{sistema de controle de versão distribuído} desenvolvido por Linus Torvalds em 2005 para gerenciar o código-fonte do sistema operacional Linux. Em termos simples, o Git permite registrar, organizar e acompanhar todas as alterações realizadas em um conjunto de arquivos, garantindo segurança, rastreabilidade e eficiência no desenvolvimento de projetos.
+O Git é um sistema de controle de versão distribuído desenvolvido por Linus Torvalds em 2005 para gerenciar o código-fonte do sistema operacional Linux. Em termos simples, o Git permite registrar, organizar e acompanhar todas as alterações realizadas em um conjunto de arquivos, garantindo segurança, rastreabilidade e eficiência no desenvolvimento de projetos.
 
-Em vez de criar várias cópias de um mesmo arquivo com nomes diferentes, como \texttt{simulacao\_final.m} ou \texttt{relatorio\_versao2.docx}, o Git mantém um \textbf{histórico detalhado} de tudo o que foi modificado, quem fez a alteração, quando e por quê. Cada modificação é registrada por meio de um \textit{commit}, que funciona como um “ponto de controle” na linha do tempo do projeto. Isso permite que você volte para versões anteriores a qualquer momento, sem perder dados.
+Em vez de criar várias cópias de um mesmo arquivo com nomes diferentes, como \texttt{simulacao\_final.m} ou \texttt{relatorio\_versao2.docx}, o Git mantém um histórico detalhado de tudo o que foi modificado, quem fez a alteração, quando e por quê. Cada modificação é registrada por meio de um commit, que funciona como um “ponto de controle” na linha do tempo do projeto. Isso permite que você volte para versões anteriores a qualquer momento, sem perder dados.
 
-Para estudantes de Engenharia Aeroespacial, isso é particularmente útil. Imagine um projeto de simulação de voo atmosférico desenvolvido no \textit{MATLAB/Simulink}. Durante o semestre, vários ajustes são realizados: mudanças nos parâmetros de altitude, novas funções para modelar a resistência do ar e gráficos para analisar a estabilidade da trajetória. Sem Git, seria necessário salvar manualmente várias versões dos arquivos para evitar perder o progresso. Com o Git, basta registrar as alterações e, se necessário, restaurar qualquer estado anterior do projeto com um único comando.
+Para estudantes de Engenharia Aeroespacial, isso é particularmente útil. Imagine um projeto de simulação de voo atmosférico desenvolvido no MATLAB/Simulink. Durante o semestre, vários ajustes são realizados: mudanças nos parâmetros de altitude, novas funções para modelar a resistência do ar e gráficos para analisar a estabilidade da trajetória. Sem Git, seria necessário salvar manualmente várias versões dos arquivos para evitar perder o progresso. Com o Git, basta registrar as alterações e, se necessário, restaurar qualquer estado anterior do projeto com um único comando.
 
-Outro benefício do Git é que ele é \textbf{distribuído}: cada membro de uma equipe tem uma cópia completa do repositório, incluindo todo o histórico do projeto. Isso significa que o trabalho não depende de um servidor central — você pode continuar desenvolvendo mesmo sem conexão com a internet e sincronizar suas alterações mais tarde. Essa característica é valiosa para projetos colaborativos, como laboratórios, trabalhos em grupo e competições acadêmicas, onde diferentes integrantes contribuem simultaneamente para o mesmo código, modelo ou relatório.
+Outro benefício do Git é que ele é distribuído: cada membro de uma equipe tem uma cópia completa do repositório, incluindo todo o histórico do projeto. Isso significa que o trabalho não depende de um servidor central — você pode continuar desenvolvendo mesmo sem conexão com a internet e sincronizar suas alterações mais tarde. Essa característica é valiosa para projetos colaborativos, como laboratórios, trabalhos em grupo e competições acadêmicas, onde diferentes integrantes contribuem simultaneamente para o mesmo código, modelo ou relatório.
 
 Em resumo, o Git é mais do que uma ferramenta para programadores: ele é um recurso essencial para organizar, versionar e colaborar em projetos complexos, garantindo que todas as etapas do desenvolvimento sejam registradas e facilmente acessíveis.
 
 \subsection{Git vs GitHub vs GitLab}
 
-É comum confundir o \textbf{Git} com plataformas como \textbf{GitHub} e \textbf{GitLab}, mas há uma diferença importante entre eles:
+É comum confundir o Git com plataformas como GitHub e GitLab, mas há uma diferença importante entre eles:
 
 \begin{itemize}
-    \item \textbf{Git} — É a \textbf{ferramenta} de controle de versão em si. Ela roda no seu computador e permite criar repositórios, registrar alterações, criar branches, fazer merges e gerenciar o histórico do projeto. Você pode usar o Git localmente, sem precisar estar conectado à internet.
+    \item \textbf{Git} — É a ferramenta de controle de versão em si. Ela roda no seu computador e permite criar repositórios, registrar alterações, criar branches, fazer merges e gerenciar o histórico do projeto. Você pode usar o Git localmente, sem precisar estar conectado à internet.
 
-    \item \textbf{GitHub} — É uma \textbf{plataforma online} que hospeda repositórios Git e oferece recursos extras para colaboração, como revisão de código, gerenciamento de tarefas, abertura de \textit{issues} e integração com ferramentas externas. É amplamente utilizada no meio acadêmico e industrial para armazenar projetos abertos e privados. Além disso, o GitHub facilita o compartilhamento de trabalhos com professores, colegas e equipes de pesquisa.
+    \item \textbf{GitHub} — É uma plataforma online que hospeda repositórios Git e oferece recursos extras para colaboração, como revisão de código, gerenciamento de tarefas, abertura de issues e integração com ferramentas externas. É amplamente utilizada no meio acadêmico e industrial para armazenar projetos abertos e privados. Além disso, o GitHub facilita o compartilhamento de trabalhos com professores, colegas e equipes de pesquisa.
 
-    \item \textbf{GitLab} — Também é uma \textbf{plataforma online} para hospedagem de repositórios Git, semelhante ao GitHub, mas com foco maior em integração contínua, automação de testes e gestão de projetos. Muitas empresas e instituições de pesquisa preferem o GitLab por permitir a instalação de servidores privados, garantindo maior controle sobre os dados e a segurança dos projetos.
+    \item \textbf{GitLab} — Também é uma plataforma online para hospedagem de repositórios Git, semelhante ao GitHub, mas com foco maior em integração contínua, automação de testes e gestão de projetos. Muitas empresas e instituições de pesquisa preferem o GitLab por permitir a instalação de servidores privados, garantindo maior controle sobre os dados e a segurança dos projetos.
 \end{itemize}
 
-Um exemplo prático: imagine que um grupo de estudantes de Engenharia Aeroespacial está desenvolvendo um \textbf{simulador de trajetória de foguetes} para um projeto interdisciplinar. O \textbf{Git} seria utilizado para gerenciar o histórico do código e das simulações localmente. Para colaborar com os colegas, compartilhar resultados e revisar contribuições, o grupo poderia criar um repositório remoto no \textbf{GitHub} ou no \textbf{GitLab}, permitindo que todos sincronizem suas alterações com facilidade. Caso o projeto fosse confidencial ou envolvesse dados sensíveis, o \textbf{GitLab} poderia ser configurado em um servidor interno da instituição, oferecendo mais privacidade e controle.
+Um exemplo prático: imagine que um grupo de estudantes de Engenharia Aeroespacial está desenvolvendo um simulador de trajetória de foguetes para um projeto interdisciplinar. O Git seria utilizado para gerenciar o histórico do código e das simulações localmente. Para colaborar com os colegas, compartilhar resultados e revisar contribuições, o grupo poderia criar um repositório remoto no GitHub ou no GitLab, permitindo que todos sincronizem suas alterações com facilidade. Caso o projeto fosse confidencial ou envolvesse dados sensíveis, o GitLab poderia ser configurado em um servidor interno da instituição, oferecendo mais privacidade e controle.
 
 Em resumo:
 \begin{itemize}
@@ -70,7 +70,7 @@ Na prática, você usará o Git para versionar e gerenciar seus arquivos, e o Gi
 
 Antes de começarmos a utilizar o Git, é necessário instalá-lo e preparar o ambiente de desenvolvimento. O processo de instalação varia de acordo com o sistema operacional, mas o objetivo final é o mesmo: permitir que você crie e gerencie repositórios locais e trabalhe com plataformas remotas, como GitHub e GitLab.
 
-Nesta apostila, recomendamos também o uso do \textbf{Visual Studio Code (VS Code)} como editor de código. Ele é gratuito, multiplataforma e possui integração nativa com o Git, permitindo visualizar alterações, realizar commits, gerenciar branches e sincronizar repositórios diretamente.
+Nesta apostila, recomendamos também o uso do Visual Studio Code (VS Code) como editor de código. Ele é gratuito, multiplataforma e possui integração nativa com o Git, permitindo visualizar alterações, realizar commits, gerenciar branches e sincronizar repositórios diretamente.
 
 A seguir, apresentamos os passos para instalação no macOS, Linux e Windows.
 
@@ -78,7 +78,7 @@ A seguir, apresentamos os passos para instalação no macOS, Linux e Windows.
 
 \begin{enumerate}
     \item \textbf{Verificar se o Git já está instalado}  
-    Abra o \textit{Terminal} e execute:
+    Abra o Terminal e execute:
     \begin{lstlisting}[style=shellstyle]
  git --version
     \end{lstlisting}
@@ -104,7 +104,7 @@ brew install git
 
 \begin{enumerate}
     \item \textbf{Verificar se o Git já está instalado}  
-    Abra o \textit{Terminal} e execute:
+    Abra o Terminal e execute:
     \begin{lstlisting}[style=shellstyle]
 git --version
     \end{lstlisting}
@@ -142,8 +142,8 @@ sudo snap install code --classic
     \item \textbf{Executar o instalador}  
     Durante a instalação, mantenha as opções padrão recomendadas, especialmente:
     \begin{itemize}
-        \item Instalar o \textbf{Git Bash} — um terminal otimizado para comandos Git.
-        \item Configurar o editor padrão como \textbf{Visual Studio Code}, caso já esteja instalado.
+        \item Instalar o Git Bash — um terminal otimizado para comandos Git.
+        \item Configurar o editor padrão como Visual Studio Code, caso já esteja instalado.
     \end{itemize}
 
     \item \textbf{Instalar o Visual Studio Code}  
@@ -185,7 +185,7 @@ Para começar a utilizar o GitHub e aproveitar todos os recursos de colaboraçã
     Abra o navegador e digite \url{https://github.com/}.
 
     \item \textbf{Clique em "Sign up":}  
-    No canto superior direito da página inicial, clique no botão \textbf{Sign up} para iniciar o processo de registro, como mostrado na Figura \ref{fig:sign_up}.
+    No canto superior direito da página inicial, clique no botão Sign up para iniciar o processo de registro, como mostrado na Figura \ref{fig:sign_up}.
 
     \begin{figure}[H]
 \centering

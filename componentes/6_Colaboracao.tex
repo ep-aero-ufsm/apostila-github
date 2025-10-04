@@ -5,15 +5,15 @@ O Git é uma ferramenta poderosa para facilitar o trabalho colaborativo em proje
 
 \subsection{Pull Requests}
 
-O \textbf{Pull Request} (PR) é uma funcionalidade oferecida por plataformas como GitHub e GitLab que permite que um colaborador proponha alterações para um repositório. Ele é amplamente utilizado em projetos colaborativos para integrar contribuições de forma controlada e revisada.
+O Pull Request (PR) é uma funcionalidade oferecida por plataformas como GitHub e GitLab que permite que um colaborador proponha alterações para um repositório. Ele é amplamente utilizado em projetos colaborativos para integrar contribuições de forma controlada e revisada.
 
 O fluxo básico de um Pull Request é o seguinte:
 \begin{enumerate}
-    \item O colaborador cria uma nova \textbf{branch} para desenvolver uma funcionalidade ou corrigir um problema.
-    \item Após realizar as alterações e fazer os \textit{commits}, o colaborador envia a branch para o repositório remoto.
+    \item O colaborador cria uma nova branch para desenvolver uma funcionalidade ou corrigir um problema.
+    \item Após realizar as alterações e fazer os commits, o colaborador envia a branch para o repositório remoto.
     \item No repositório remoto, o colaborador abre um Pull Request, descrevendo as alterações realizadas e o motivo delas.
     \item Outros membros da equipe revisam o Pull Request, sugerem melhorias e aprovam as alterações.
-    \item Após a aprovação, as alterações são integradas à branch principal (\texttt{main} ou \texttt{master}) por meio de um \textit{merge}.
+    \item Após a aprovação, as alterações são integradas à branch principal (\texttt{main} ou \texttt{master}) por meio de um merge.
 \end{enumerate}
 
 Os Pull Requests são uma excelente forma de garantir que todas as alterações sejam revisadas antes de serem integradas ao projeto, promovendo a qualidade do código e a colaboração entre os membros da equipe.
@@ -38,7 +38,7 @@ Para garantir o sucesso de um projeto colaborativo, é importante adotar boas pr
     \item \textbf{Escrever mensagens de commit claras:} Cada commit deve ter uma mensagem que explique de forma objetiva o que foi alterado, como \texttt{"Adiciona função para calcular resistência do ar"}.
     \item \textbf{Sincronizar frequentemente:} Antes de iniciar uma nova tarefa, atualize sua branch local com as alterações mais recentes da branch principal para evitar conflitos.
     \item \textbf{Resolver conflitos de forma colaborativa:} Quando conflitos de versão ocorrerem, discuta com os membros da equipe para decidir a melhor forma de resolvê-los.
-    \item \textbf{Revisar e testar antes de integrar:} Antes de fazer o \textit{merge} de uma branch, certifique-se de que todas as alterações foram revisadas e testadas.
+    \item \textbf{Revisar e testar antes de integrar:} Antes de fazer o merge de uma branch, certifique-se de que todas as alterações foram revisadas e testadas.
 \end{itemize}
 
 Essas práticas ajudam a manter o projeto organizado, reduzir erros e promover um ambiente de trabalho colaborativo e produtivo.
@@ -77,7 +77,7 @@ No GitHub ou GitLab, abra um Pull Request para a branch \texttt{feature/resisten
 
 \subsubsection*{Passo 5: Revisar e integrar as alterações}
 
-Os membros da equipe revisam o Pull Request, sugerem melhorias e, após a aprovação, fazem o \textit{merge} da branch na branch principal:
+Os membros da equipe revisam o Pull Request, sugerem melhorias e, após a aprovação, fazem o merge da branch na branch principal:
 \begin{lstlisting}[style=shellstyle]
 git checkout main
 git merge feature/resistencia-ar
@@ -85,7 +85,7 @@ git merge feature/resistencia-ar
 
 \subsubsection*{Passo 6: Atualizar o repositório local}
 
-Após o \textit{merge}, atualize seu repositório local para refletir as alterações mais recentes:
+Após o merge, atualize seu repositório local para refletir as alterações mais recentes:
 \begin{lstlisting}[style=shellstyle]
 git pull origin main
 \end{lstlisting}
