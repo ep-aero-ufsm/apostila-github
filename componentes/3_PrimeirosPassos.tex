@@ -53,13 +53,15 @@ git add .
 \end{lstlisting}
 
 \noindent
-O ponto (\texttt{.}) indica que todos os arquivos e subpastas do diretório atual serão rastreados.  
+O ponto (\texttt{.}) indica que todos os arquivos e subpastas do diretório atual serão rastreados. Esse comando deve ser usado com muito cuidado, pois todos os arquivos dentro da pasta serão rastreados. Isso pode, potencialmente, incluir arquivos que contém senhas, ou arquivos temporários que não devem ser adicionados ao Git. 
 
 Se você quiser adicionar apenas arquivos específicos, use:
 
 \begin{lstlisting}[style=shellstyle]
 git add simulacao.m relatorio.pdf
 \end{lstlisting}
+
+Isto é, liste os nomes dos arquivos um a um que você deseja rastrear.
 
 \subsubsection*{Ignorando arquivos desnecessários}
 
@@ -77,7 +79,9 @@ Para evitar que esses arquivos sejam rastreados, crie um arquivo chamado \texttt
 *.mat
 \end{lstlisting}
 
-Dessa forma, o Git ignorará automaticamente esses arquivos ao executar \texttt{git add}.
+Dessa forma, o Git ignorará automaticamente esses arquivos ao executar \texttt{git add}. Você pode usar esse arquivo \texttt{.gitignore} para evitar rastrear qualquer tipo de arquivo. 
+
+O uso dessa funcionalidade permite evitar a poluição do repositório, mantendo rastreado apenas o código fonte e arquivos essenciais. As operações com o Git também tornam-se mais lentas quando o repositório está muito pesado. Por fim, essa funcionalidade evita commits acidentais ao adicionar arquivos temporários sem querer.
 
 \subsection{Fazendo seu Primeiro Commit}
 
