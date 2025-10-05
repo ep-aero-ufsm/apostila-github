@@ -43,51 +43,51 @@ Para garantir o sucesso de um projeto colaborativo, é importante adotar boas pr
 
 Essas práticas ajudam a manter o projeto organizado, reduzir erros e promover um ambiente de trabalho colaborativo e produtivo.
 
-\subsection{Exemplo Prático: Contribuindo para um Repositório Compartilhado}
+% \subsection{Exemplo Prático: Contribuindo para um Repositório Compartilhado}
 
-%% ber - NECESSITA SER TOTALMENTE REFEITO E PENSADO, isso é um exemplo do gpt
+% %% ber - NECESSITA SER TOTALMENTE REFEITO E PENSADO, isso é um exemplo do gpt
 
-Vamos considerar um exemplo prático de colaboração em um projeto de simulação de voo atmosférico. Suponha que você e sua equipe estão desenvolvendo um modelo no MATLAB/Simulink e precisam adicionar uma nova funcionalidade para calcular a resistência do ar.
+% Vamos considerar um exemplo prático de colaboração em um projeto de simulação de voo atmosférico. Suponha que você e sua equipe estão desenvolvendo um modelo no MATLAB/Simulink e precisam adicionar uma nova funcionalidade para calcular a resistência do ar.
 
-\subsubsection*{Passo 1: Criar uma branch para a tarefa}
+% \subsubsection*{Passo 1: Criar uma branch para a tarefa}
 
-No terminal, crie uma nova branch para desenvolver a funcionalidade:
-\begin{lstlisting}[style=shellstyle]
-git checkout -b feature/resistencia-ar
-\end{lstlisting}
+% No terminal, crie uma nova branch para desenvolver a funcionalidade:
+% \begin{lstlisting}[style=shellstyle]
+% git checkout -b feature/resistencia-ar
+% \end{lstlisting}
 
-\subsubsection*{Passo 2: Fazer as alterações e commits}
+% \subsubsection*{Passo 2: Fazer as alterações e commits}
 
-Implemente a funcionalidade no código e registre as alterações com commits claros:
-\begin{lstlisting}[style=shellstyle]
-git add simulacao.m
-git commit -m "Adiciona função para calcular resistência do ar"
-\end{lstlisting}
+% Implemente a funcionalidade no código e registre as alterações com commits claros:
+% \begin{lstlisting}[style=shellstyle]
+% git add simulacao.m
+% git commit -m "Adiciona função para calcular resistência do ar"
+% \end{lstlisting}
 
-\subsubsection*{Passo 3: Enviar a branch para o repositório remoto}
+% \subsubsection*{Passo 3: Enviar a branch para o repositório remoto}
 
-Envie a branch para o repositório remoto para compartilhar seu trabalho:
-\begin{lstlisting}[style=shellstyle]
-git push origin feature/resistencia-ar
-\end{lstlisting}
+% Envie a branch para o repositório remoto para compartilhar seu trabalho:
+% \begin{lstlisting}[style=shellstyle]
+% git push origin feature/resistencia-ar
+% \end{lstlisting}
 
-\subsubsection*{Passo 4: Abrir um Pull Request}
+% \subsubsection*{Passo 4: Abrir um Pull Request}
 
-No GitHub ou GitLab, abra um Pull Request para a branch \texttt{feature/resistencia-ar}, descrevendo as alterações realizadas.
+% No GitHub ou GitLab, abra um Pull Request para a branch \texttt{feature/resistencia-ar}, descrevendo as alterações realizadas.
 
-\subsubsection*{Passo 5: Revisar e integrar as alterações}
+% \subsubsection*{Passo 5: Revisar e integrar as alterações}
 
-Os membros da equipe revisam o Pull Request, sugerem melhorias e, após a aprovação, fazem o merge da branch na branch principal:
-\begin{lstlisting}[style=shellstyle]
-git checkout main
-git merge feature/resistencia-ar
-\end{lstlisting}
+% Os membros da equipe revisam o Pull Request, sugerem melhorias e, após a aprovação, fazem o merge da branch na branch principal:
+% \begin{lstlisting}[style=shellstyle]
+% git checkout main
+% git merge feature/resistencia-ar
+% \end{lstlisting}
 
-\subsubsection*{Passo 6: Atualizar o repositório local}
+% \subsubsection*{Passo 6: Atualizar o repositório local}
 
-Após o merge, atualize seu repositório local para refletir as alterações mais recentes:
-\begin{lstlisting}[style=shellstyle]
-git pull origin main
-\end{lstlisting}
+% Após o merge, atualize seu repositório local para refletir as alterações mais recentes:
+% \begin{lstlisting}[style=shellstyle]
+% git pull origin main
+% \end{lstlisting}
 
-Com esse fluxo, a equipe pode colaborar de forma eficiente, garantindo que todas as contribuições sejam revisadas, testadas e integradas de maneira
+% Com esse fluxo, a equipe pode colaborar de forma eficiente, garantindo que todas as contribuições sejam revisadas, testadas e integradas de maneira
