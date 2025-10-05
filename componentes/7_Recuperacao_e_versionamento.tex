@@ -10,6 +10,8 @@ O histórico de commits permite acompanhar todas as alterações feitas no proje
 git log
 \end{lstlisting}
 
+O comando \texttt{git log} exibe uma lista cronológica de commits, apresentando informações como hash único, autor, data e mensagem de cada alteração. Ao executar este comando, você observará que o commit mais recente está identificado pela referência HEAD. O HEAD é um ponteiro que indica a posição atual no histórico do repositório, apontando para o commit em que você está trabalhando no momento, geralmente correspondendo ao último commit do branch atual.
+
 No GitHub, acesse a aba Commits do repositório para ver o histórico online, incluindo autor, data e mensagem de cada commit.
 
 \subsection{Recuperação de Arquivos ou Versões Anteriores}
@@ -46,19 +48,35 @@ Dessa forma, você cria um branch começando do commit escolhido e evita problem
 
 \subsection{Reversão de Commits (Undo/Revert/Reset)}
 
-Para desfazer um commit que já foi enviado ao repositório remoto (usando \texttt{git push}), utilize:
+Para desfazer alterações no histórico do Git, existem diferentes comandos dependendo do contexto e da severidade necessária.
+
+Para reverter um commit que já foi enviado ao repositório remoto, utilize o comando git revert. Este comando cria um novo commit que desfaz as alterações do commit especificado, sendo seguro para uso em commits públicos:
 
 \begin{lstlisting}[style=shellstyle]
 git revert <hash-do-commit>
 \end{lstlisting}
 
-Se o commit ainda não foi enviado ao remoto, pode-se usar:
+Para commits que ainda não foram enviados ao repositório remoto, pode-se utilizar o comando \texttt{git reset}. Este comando possui três modos principais de operação, que diferem no tratamento das alterações não commitadas:
+
+\begin{lstlisting}[style=shellstyle]
+git reset --soft <hash-do-commit>
+\end{lstlisting}
+
+O modo \texttt{--soft} move o ponteiro HEAD para o commit especificado, mas mantém todas as alterações subsequentes na área de staging, permitindo que você refaça o commit com mudanças.
+
+\begin{lstlisting}[style=shellstyle]
+git reset --mixed <hash-do-commit>
+\end{lstlisting}
+
+O modo \texttt{--mixed} (padrão quando nenhuma opção é especificada) move o HEAD e desfaz o staging das alterações, mas mantém as modificações no diretório de trabalho.
 
 \begin{lstlisting}[style=shellstyle]
 git reset --hard <hash-do-commit>
 \end{lstlisting}
 
-No GitHub, a reversão pode ser feita manualmente criando um novo commit que desfaz as alterações indesejadas.
+O modo \texttt{--hard} move o HEAD e descarta todas as alterações não commitadas, retornando o diretório de trabalho exatamente ao estado do commit especificado. Este comando deve ser usado com cautela, pois pode eliminar permanentemente trabalho não salvo.
+
+No GitHub, a reversão também pode ser realizada através da interface web, que automaticamente cria um novo commit revertendo as alterações indesejadas.
 
 \subsection{Comparação entre Versões (Diff)}
 
