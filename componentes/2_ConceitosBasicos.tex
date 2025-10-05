@@ -253,11 +253,9 @@ Em seguida, edite as informações do seu perfil da maneira como desejar.
 
 Para trabalhar com o GitHub, é possível realizar a comunicação com a plataforma de duas formas principais: HTTPS ou SSH.
 
-A utilização de HTTPS é mais simples, pois não exige configuração inicial. No entanto, toda vez que for comunicar com o GitHub, é necessário informar usuário e senha ou um token de acesso.
+O método HTTPS é o método mais simples, pois não exige configuração inicial. Entretanto, a cada operação feita com o Git, é necessário informar seu nome de usuário e um token de acesso pessoal, que deve ser regenerado regularmente. Isso pode se tornar repetitivo e é, no geral, menos seguro.
 
-Já o uso de SSH permite uma conexão mais prática e segura. Ao gerar uma chave SSH e adicioná-la à sua conta do GitHub, a autenticação passa a ser feita de forma automática, sem a necessidade de informar usuário e senha a cada comunicação. Essa abordagem é recomendada para quem utiliza o Git com frequência, pois agiliza o fluxo de trabalho e aumenta a segurança da comunicação.
-
-Cada computador que se comunica com o GitHub precisa ter sua própria chave SSH. A chave é formada por duas partes: uma chave privada, que fica no computador e nunca deve ser compartilhada, e uma chave pública, que é adicionada à conta do GitHub. Assim, o GitHub reconhece o computador como autorizado a acessar os repositórios, sem precisar digitar usuário e senha a cada comunicação.
+Já o método SSH (Secure Shell) é um protocolo de comunicação criptografado baseado no uso de um par de chaves criptográficas. Uma chave pública é fornecida ao Git, e uma chave privada é guardada no seu computador. A cada operação com o Git, as chaves são usadas para verificar a autenticidade do usuário, de forma automática e mais segura. Essa abordagem é recomendada para quem utiliza o Git com frequência, pois agiliza o fluxo de trabalho e aumenta a segurança da comunicação.
 
 Para gerar uma chave SSH, no VS Code, abra o terminal integrado (\texttt{Ctrl + \`}) e siga os passos abaixo para gerar a chave SSH:
 
